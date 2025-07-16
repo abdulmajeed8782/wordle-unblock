@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Games Hub - Play Wordle & More!</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>🎯 WordHub</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#games">Games</a>
+                <a href="#about">About</a>
+                <a href="https://wordleunlimitedunblocked.com/" target="_blank" rel="dofollow" class="cta-btn">Play Wordle Unlimited</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Challenge Your Mind with Word Games</h1>
+                <p>Test your vocabulary and puzzle-solving skills with our collection of engaging word games!</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="startWordle()">wordle unblocked</button>
+                    <a href="https://wordleunlimitedunblocked.com/" target="_blank" rel="dofollow" class="btn-secondary">Wordle Unlimited →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="games-section">
+            <h2>Choose Your Game</h2>
+            <div class="games-grid">
+                <div class="game-card active" data-game="wordle">
+                    <div class="game-icon">🟩</div>
+                    <h3>Classic Wordle</h3>
+                    <p>Guess the 5-letter word in 6 tries</p>
+                </div>
+                <div class="game-card" data-game="wordscramble">
+                    <div class="game-icon">🔤</div>
+                    <h3>Word Scramble</h3>
+                    <p>Unscramble the letters to find the word</p>
+                </div>
+                <div class="game-card" data-game="wordguess">
+                    <div class="game-icon">💭</div>
+                    <h3>Word Guess</h3>
+                    <p>Guess the word from the given hint</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="game-container">
+            <!-- Wordle Game -->
+            <div id="wordle-game" class="game-content active">
+                <div class="game-header">
+                    <h2>Classic Wordle</h2>
+                    <div class="game-stats">
+                        <span>Attempts: <span id="attempts">0</span>/6</span>
+                        <button onclick="resetWordle()" class="reset-btn">New Game</button>
+                    </div>
+                </div>
+                <div id="wordle-grid" class="wordle-grid"></div>
+                <div class="keyboard" id="keyboard"></div>
+                <div id="wordle-message" class="game-message"></div>
+            </div>
+
+            <!-- Word Scramble Game -->
+            <div id="wordscramble-game" class="game-content">
+                <div class="game-header">
+                    <h2>Word Scramble</h2>
+                    <button onclick="newScramble()" class="reset-btn">New Word</button>
+                </div>
+                <div class="scramble-container">
+                    <div class="scrambled-word" id="scrambled-word"></div>
+                    <input type="text" id="scramble-input" placeholder="Enter your guess..." maxlength="15">
+                    <button onclick="checkScramble()" class="submit-btn">Submit</button>
+                </div>
+                <div id="scramble-message" class="game-message"></div>
+            </div>
+
+            <!-- Word Guess Game -->
+            <div id="wordguess-game" class="game-content">
+                <div class="game-header">
+                    <h2>Word Guess</h2>
+                    <button onclick="newWordGuess()" class="reset-btn">New Word</button>
+                </div>
+                <div class="wordguess-container">
+                    <div class="hint" id="word-hint"></div>
+                    <input type="text" id="wordguess-input" placeholder="Enter your guess..." maxlength="15">
+                    <button onclick="checkWordGuess()" class="submit-btn">Submit</button>
+                </div>
+                <div id="wordguess-message" class="game-message"></div>
+            </div>
+        </div>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Want More Wordle Fun?</h2>
+                <p>Play unlimited Wordle games with no daily restrictions!</p>
+                <a href="https://wordleunlimitedunblocked.com/" target="_blank" rel="dofollow" class="cta-btn-large">
+                    🎮 Play Wordle Unlimited Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 WordHub. Challenge your mind daily!</p>
+            <div class="footer-links">
+                <a href="https://wordleunlimitedunblocked.com/" target="_blank" rel="dofollow">Wordle Unlimited</a>
+                <a href="#games">Games</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
